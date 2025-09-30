@@ -13,6 +13,7 @@ public class Main {
 
         Estudiante estudiante = universidad.getListaEstudiantes().get(0);
         estudiante.getOwnedByUniversidad();
+        calcularDefinitivaEstudiante(universidad);
 
         int opcion = 0;
         do {
@@ -81,6 +82,11 @@ public class Main {
 
     }
 
+    private static void calcularDefinitivaEstudiante(Universidad universidad) {
+        String cedulaDocente = "1094";
+        universidad.calcularDefinitivaEstudiante(cedulaDocente);
+    }
+
     private static String crearEstudiante(Universidad universidad) {
         // Ahora solicita los datos por consola
         String nombre = leerCadena("Ingrese el nombre:");
@@ -103,6 +109,8 @@ public class Main {
         return String.format("%s %s | ID: %s | Edad: %d | Notas: %.2f, %.2f, %.2f",
                 nombre, apellido, identificacion, edad, nota1, nota2, nota3);
     }
+
+
 
     private static void eliminarEstudiante(Universidad universidad) {
         String identificacion = leerCadena("Ingrese la identificación del estudiante a eliminar:");

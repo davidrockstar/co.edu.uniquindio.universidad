@@ -261,4 +261,17 @@ public class Universidad {
         }
         return false;
     }
+
+    public void calcularDefinitivaEstudiante(String cedulaDocente) {
+        Docente docenteEncontrado = obtenerDocente(cedulaDocente);
+        if(docenteEncontrado != null) {
+            for (Estudiante estudiante : getListaEstudiantes()) {
+                double definitiva = docenteEncontrado.calcularNotaDefinitiva(
+                        estudiante.getNota1(),
+                        estudiante.getNota2(),
+                        estudiante.getNota3());
+                System.out.println("Nota definitiva del estudiante: " + estudiante.getNombre() + " es: " + definitiva);
+            }
+        }
+    }
 }

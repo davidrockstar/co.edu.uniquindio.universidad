@@ -30,5 +30,7 @@ public class Estudiante {
     public Universidad getOwnedByUniversidad() {return ownedByUniversidad;}
     public void setOwnedByUniversidad(Universidad ownedByUniversidad) {this.ownedByUniversidad = ownedByUniversidad;}
 
+
+
     }
 
